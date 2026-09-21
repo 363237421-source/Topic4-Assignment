@@ -6,6 +6,9 @@
         {
             string name;
 
+            Console.WriteLine("Part1");
+            Console.WriteLine();
+
             Console.Write("Hello, what is your name? ");
             name = Console.ReadLine();
 
@@ -25,6 +28,10 @@
 
         public static void part2()
         {
+            Console.WriteLine("Part2");
+            Console.WriteLine();
+            
+
             Console.WriteLine("I will be gathering information from you, please answer truthfully.");
 
             string firstName, lastName, login;
@@ -67,6 +74,9 @@
 
         public static void part3()
         {
+            Console.WriteLine("part3");
+            Console.WriteLine();
+
             string name;
             int age;
 
@@ -84,8 +94,68 @@
             Console.Clear();
         }
 
+        public static void part4()
+        {
+            Console.WriteLine("part4");
+            Console.WriteLine();
+
+
+            double firstNum, secondNum, thirdNum;
+
+            Console.WriteLine("Hello, this is a dumb calculator.");
+            Console.WriteLine("Please insert a number: ");
+            Double.TryParse((Console.ReadLine()) ,out firstNum);
+            Console.WriteLine("Please insert your second number: ");
+            Double.TryParse((Console.ReadLine()), out secondNum);
+            Console.WriteLine("Please insert your final number: ");
+            Double.TryParse((Console.ReadLine()) , out thirdNum);
+            Console.WriteLine("Thank you for your participation");
+
+            Console.ReadLine();
+            Console.Clear();
+
+            
+            Console.WriteLine("The answer is... " + ((firstNum + secondNum + thirdNum)/2));
+            Console.ReadLine();
+            Console.Clear();
+            
+            
+        }
+
+        public static void part5()
+        {
+            Double price1, price2;
+            string item1, item2;
+
+
+            Console.WriteLine("Please do this so I can create your reciept!");
+            Console.WriteLine();
+            Console.WriteLine("What is the name of your first item?");
+            item1 = Console.ReadLine();
+            Console.WriteLine("What is the price of " + item1);
+            Double.TryParse(Console.ReadLine(), out price1);
+            Console.WriteLine("What is your second item");
+            item2 = Console.ReadLine();
+            Console.WriteLine("What is the price of " + item2);
+            Double.TryParse(Console.ReadLine(), out price2);
+
+
+            Console.WriteLine();
+            Console.WriteLine("Sales Receipt");
+
+            Console.WriteLine();
+        }
+
         public static void Main(string[] args)
         {
+
+            part5();
+
+            Console.WriteLine();
+
+            part4();
+
+            Console.WriteLine();
 
             part3();
 
