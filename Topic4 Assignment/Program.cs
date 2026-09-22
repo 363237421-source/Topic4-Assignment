@@ -12,17 +12,34 @@
             Console.Write("Hello, what is your name? ");
             name = Console.ReadLine();
 
+            
+
             int age;
             Console.WriteLine("Hi, " + name + " how old are you?");
-            Int32.TryParse(Console.ReadLine(), out age);
+            string input = Console.ReadLine();
+            while (!Int32.TryParse(input, out age))
+            {
+                Console.WriteLine("That is not an age! Please try again.");
+                input = Console.ReadLine();
+            }
             Console.WriteLine("So you are " + age + " years old, hmm? Your life has gone by in an instant huh?");
 
             double price;
+
             Console.WriteLine("Say, how much do you make an hour " + name);
-            Double.TryParse(Console.ReadLine(), out price);
+            string input2 = Console.ReadLine();
+            while (!Double.TryParse(input2, out price))
+            {
+                Console.WriteLine("That is not a number. Please try again.");
+                input2 = Console.ReadLine();
+            }
+
             Console.WriteLine("Wow, " + price.ToString("C") + " is quite a bit of cash you are making. hourly");
             Console.WriteLine("Well, I hope have a wonderful and blessed life " + name);
-
+            Console.ReadLine();
+            Console.WriteLine("Please press enter to clear.");
+            Console.ReadLine();
+            Console.Clear();
 
         }
 
@@ -124,8 +141,9 @@
 
         public static void part5()
         {
-            Double price1, price2;
+            Double price1, price2, totalPrice, discount, tax, truePrice;
             string item1, item2;
+
 
 
             Console.WriteLine("Please do this so I can create your reciept!");
@@ -139,33 +157,48 @@
             Console.WriteLine("What is the price of " + item2);
             Double.TryParse(Console.ReadLine(), out price2);
 
+            totalPrice = (price1 + price2);
+            discount = (totalPrice * 0.20);
+            tax = (totalPrice * 0.12);
+            truePrice = (totalPrice - discount + tax);
+            
 
             Console.WriteLine();
             Console.WriteLine("Sales Receipt");
-
             Console.WriteLine();
+            Console.WriteLine("Item 1: " + item1);
+            Console.WriteLine("Price: " + price1.ToString("C"));
+            Console.WriteLine("Item 2: " + item2);
+            Console.WriteLine("Price: " + price2.ToString("C"));
+            Console.WriteLine("==============");
+            Console.WriteLine("Total: " + totalPrice.ToString("C"));
+            Console.WriteLine("Discount 20%: " + Math.Round(discount, 2).ToString("C"));
+            Console.WriteLine("Subtotal: " + (totalPrice - discount).ToString("C"));
+            Console.WriteLine("Tax 13%: " + tax.ToString("C"));
+            Console.WriteLine("==============");
+            Console.WriteLine("Total Owned: " + truePrice.ToString("C"));
         }
 
         public static void Main(string[] args)
         {
 
-            part5();
+            part1();
 
             Console.WriteLine();
 
-            part4();
+            part2();
 
             Console.WriteLine();
 
             part3();
 
-            Console.ReadLine();
+            Console.WriteLine();            //               im just a baby
 
-            part2();
+            part4();
 
-            Console.ReadLine();
+            Console.WriteLine();
 
-            part1();
+            part5();
          
         }
     }
