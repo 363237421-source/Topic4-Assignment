@@ -128,9 +128,7 @@
             Double.TryParse((Console.ReadLine()) , out thirdNum);
             Console.WriteLine("Thank you for your participation");
 
-            Console.ReadLine();
-            Console.Clear();
-
+            Console.WriteLine();
             
             Console.WriteLine("The answer is... " + ((firstNum + secondNum + thirdNum)/2));
             Console.ReadLine();
