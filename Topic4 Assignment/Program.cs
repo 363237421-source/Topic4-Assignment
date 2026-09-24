@@ -1,6 +1,6 @@
 ﻿namespace Topic4_Assignment
 {
-    internal class Program
+    internal class Program  //Said
     {
         public static void part1()
         {
@@ -170,12 +170,12 @@
             Console.WriteLine("Price: " + price1.ToString("C"));
             Console.WriteLine("Item 2: " + item2);
             Console.WriteLine("Price: " + price2.ToString("C"));
-            Console.WriteLine("==============");
+            Console.WriteLine("================");
             Console.WriteLine("Total: " + totalPrice.ToString("C"));
             Console.WriteLine("Discount 20%: " + Math.Round(discount, 2).ToString("C"));
             Console.WriteLine("Subtotal: " + (totalPrice - discount).ToString("C"));
             Console.WriteLine("Tax 13%: " + tax.ToString("C"));
-            Console.WriteLine("==============");
+            Console.WriteLine("================");
             Console.WriteLine("Total Owned: " + truePrice.ToString("C"));
         }
 
